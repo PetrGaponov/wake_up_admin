@@ -6,7 +6,7 @@ services:
     build:
       context: rest/
     image: rest_rabbitmq
-  dialer:.
+  dialer:
     network_mode: host
     build:
       context: dialer/
