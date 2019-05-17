@@ -1,0 +1,31 @@
+{
+    "PROD":  {
+	"host_rabbit_server": "127.0.0.1",
+	"rabbit_user": "admin",
+	"rabbit_password": "password",
+	"sound_file_dir": "/usr/share/asterisk/sounds/ru/s2t/",
+	"access_key_polly": "xxxxxxxxx",
+	"secret_key_polly": "xxxxxxxxxxxxxxxxxxxxx",
+	"db_name": 11
+     },
+
+    "DEV":  {
+	"host_rabbit_server": "127.0.0.1",
+        "rabbit_user": "sysadm",
+        "rabbit_password": "xxxxxxxx",
+        "sound_file_dir": "/usr/share/asterisk/sounds/ru/s2t/",
+        "access_key_polly": "xxxxxxxxxxxxxxxx",
+        "secret_key_polly": "xxxxxxxxxxxxxxxxx",
+	"db_name": 11
+        },
+
+    "TEST":  {
+	"host_rabbit_server": "127.0.0.1",
+        "rabbit_user": "sysadm",
+        "rabbit_password": "xxxxxxx",
+        "sound_file_dir": "/usr/share/asterisk/sounds/ru/s2t/",
+        "access_key_polly": "pass1",
+        "secret_key_polly": "pass2",
+	"db_name": 11
+        }
+}

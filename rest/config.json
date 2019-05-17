@@ -1,0 +1,37 @@
+{
+    "PROD":  {
+	"authkey": "Bearer xxxxxxxxxxxxxxxxxx",
+        "host_db_server": "127.0.0.1",
+	"host_rabbit_server": "127.0.0.1",
+        "dbname": 10,
+        "dbuser": "user",
+        "dbpassword": "pass",
+	"rabbit_user": "admin",
+	"rabbit_password": "pass",
+	"sound_file_dir": "/usr/share/asterisk/sounds/"
+     },
+    "DEV":  {
+	"authkey": "Bearer xxxxxxxxxxxxxxxxx",
+        "host_db_server": "127.0.0.1",
+        "host_rabbit_server":"127.0.0.1",
+        "dbname": 10,
+        "dbuser": "user",
+        "dbpassword":"xxxxx",
+        "rabbit_user":"sysadm",
+        "rabbit_password":"pass",
+        "sound_file_dir":"/usr/share/asterisk/sounds/"
+
+        },
+    "TEST":  {
+	"authkey": "Bearer xxxxxxxxxxxxx",
+        "host_db_server": "127.0.0.1",
+        "host_rabbit_server":"127.0.0.1",
+        "dbname": 10,
+        "dbuser": "user",
+        "dbpassword":"pass",
+        "rabbit_user":"user",
+        "rabbit_password":"pass",
+        "sound_file_dir":"/usr/share/asterisk/sounds/"
+
+        }
+}

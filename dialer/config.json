@@ -1,0 +1,72 @@
+{
+    "PROD":  {
+        "username": "user",
+	"password": "pass",
+	"asterisk_host": "127.0.0.1",
+	"endpoint1":"SIP/sip1/",
+	"endpoint2":"SIP/sip2/",
+	"timeout":50,
+	"count":1,
+	"timeout2":4,
+	"authkey": "Basic xxxxxxxxxxxxxxx",
+	"host_db_server": "127.0.0.1",
+	"host_rabbit_server": "127.0.0.1",
+	"dbname": 10,
+	"dbuser": "user",
+	"dbpassword":"pass",
+        "number_of_repeats": 2,
+	"rabbit_user": "user",
+	"rabbit_password":"pass",
+	"sound_dir":"/usr/share/asterisk/sounds/ru/t2s/",
+	"sound_prefix": "t2s/",
+	"tel_prefix": "8"
+
+     },
+
+    "DEV":  {
+        "username": "user",
+        "password": "pass",
+        "asterisk_host": "127.0.0.1",
+        "endpoint1":"SIP/sip1/",
+        "endpoint2":"SIP/sip2/",
+        "timeout":50,
+        "count":1,
+        "timeout2":4,
+        "authkey": "Basic xxxxxxxxxxxxxxxxxxx==",
+        "host_db_server": "127.0.0.1",
+        "host_rabbit_server": "127.0.0.1",
+        "dbname": 10,
+        "dbuser": "dialer",
+        "dbpassword":"dialer",
+        "number_of_repeats": 2,
+        "rabbit_user": "sysadm",
+        "rabbit_password":"R6zmk43XLnH4",
+	"sound_dir":"/usr/share/asterisk/sounds/ru/t2s/",
+        "sound_prefix": "t2s/",
+	"tel_prefix": "8"
+     },
+    
+    "TEST":  {
+        "username": "user",
+        "password": "password",
+        "asterisk_host": "127.0.0.1",
+        "endpoint1":"local/",
+        "endpoint2":"local/",
+        "timeout":50,
+        "count":1,
+        "timeout2":4,
+        "authkey": "Basic xxxxxxxxxx",
+        "host_db_server": "127.0.0.1",
+        "host_rabbit_server": "127.0.0.1",
+        "dbname": 10,
+        "dbuser": "user",
+        "dbpassword":"pass",
+        "number_of_repeats": 2,
+        "rabbit_user": "user",
+        "rabbit_password":"password",
+	"sound_dir":"/usr/share/asterisk/sounds/ru/t2s/",
+        "sound_prefix": "t2s/",
+	"tel_prefix": "8"
+
+     }
+}
