@@ -6,11 +6,13 @@ services:
     build:
       context: rest/
     image: rest_rabbitmq
-  dialer: 
+  dialer:.
     network_mode: host
     build:
       context: dialer/
     image: dialer_rabbitmq
+    volumes:
+      - /usr/share/asterisk/sounds/ru/t2s:/usr/share/asterisk/sounds/ru/t2s
     ports:
       - "3333:3333"
   rpc:
@@ -18,3 +20,5 @@ services:
     build:
       context: rpc/
     image: rpc_rabbitmq
+    volumes:
+      - /usr/share/asterisk/sounds/ru/t2s:/usr/share/asterisk/sounds/ru/t2s
