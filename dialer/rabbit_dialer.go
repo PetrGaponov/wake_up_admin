@@ -465,12 +465,12 @@ func main() {
 			)
 			fmt.Println(" Delay Name: ", qDelay.Name)
 			failOnError(err, "Failed to open a channel qDelay")
-			//BIND   по моему  делается над queue Consumer
+			//BIND   делается над queue Consumer
 			//добавил привязку dialer очереди
 			err = ch.QueueBind("dialer", "dialer", "dialerInput", false, nil) //привязываем очередь  результатов к Exchange point
 			failOnError(err, "Failed to bind  queue dialer")
-			err = ch.QueueBind("resultsDialer", "resultsDialer", "dialerInput", false, nil) //привязываем очередь  результатов к Exchange point
-			failOnError(err, "Failed to bind  queue resultsDialer")
+			//err = ch.QueueBind("resultsDialer", "resultsDialer", "dialerInput", false, nil) //привязываем очередь  результатов к Exchange point
+			//failOnError(err, "Failed to bind  queue resultsDialer")
 			err = ch.QueueBind("delayDialer", "delayDialer", "dialerInput", false, nil) //привязываем очередь  delay к Exchange point
 			failOnError(err, "Failed to bind  queue delayDialer")
 
