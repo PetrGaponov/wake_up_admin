@@ -17,7 +17,10 @@ COPY .env config.json /opt/rest/
 
 #FROM scratch
 FROM alpine:3.9 as prod_img
-RUN mkdir -p /opt/rest
+RUN mkdir -p /opt/rest/
+RUN apk update && apk add ca-certificates && apk add tzdata
+RUN cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+RUN echo "Europe/Moscow" >  /etc/timezone
 COPY --from=builder /opt/rest/* /opt/rest/
 WORKDIR /opt/rest/
 EXPOSE 3333
