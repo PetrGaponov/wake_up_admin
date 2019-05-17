@@ -17,9 +17,14 @@ COPY .env config.json /opt/rpc/
 
 #FROM scratch
 FROM alpine:3.9 as prod_img
-RUN mkdir -p /opt/rpc
+RUN mkdir -p /opt/rpc/
+RUN mkdir -p /usr/share/asterisk/sounds/ru/t2s/
+RUN apk update && apk add ca-certificates && apk add tzdata && apk add sox && apk add lame
 COPY --from=builder /opt/rpc/* /opt/rpc/
-RUN apk add sox
-RUN apk add lame
+RUN cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+RUN echo "Europe/Moscow" >  /etc/timezone
+#TZ=Europe/Moscow
+#cp /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 WORKDIR /opt/rpc/
 ENTRYPOINT ["/opt/rpc/rpc"]
+
